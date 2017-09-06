@@ -1,0 +1,101 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+
+  background: #4a4a4a;
+  color: green;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.45;
+  font-size: 1.2em;
+
+}
+
+.sidebar{
+
+  background: blue;
+  flex: 1 1 20%;
+  padding: 3em;
+  min-width: 300px;
+
+
+}
+
+.main-content{
+
+  padding: 10%;
+  flex: 1 1 80%;
+  min-height: 100vh;
+
+}
+
+.nav-item{
+
+  color: pink;
+  display: inline-block;
+  font-size: 1.7rem;
+  @media (min-width: 1500px){
+
+    display: block;
+  }
+}
+
+.portfolio-item{
+
+  background: red;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.portfolio{
+  display: grid;
+  height: 100%;
+  grid-template-rows:repeat(6, 1fr) ;
+  grid-template-columns:repeat(5, 1fr) ;
+  grid-gap: 20px;
+}
+
+.portfolio-item.square{
+
+  grid-row: span 2;
+  grid-column: span 2;
+
+}
+
+.portfolio-item.large-square{
+
+  grid-row: span 3;
+  grid-column: span 3;
+}
+
+.portfolio-item.tall{
+
+  grid-row: span 3;
+  grid-column: span 2;
+}
+
+.portfolio-item.wide{
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.two{
+  background-image: url(//unsplash.it/800/600);
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  background-blend-mode: hard-light;
+    transition: all ease-in-out 3s;
+}
+
+.two &:hover{
+  background-color: black;
+  background-blend-mode: hard-light;
+
+
+}
